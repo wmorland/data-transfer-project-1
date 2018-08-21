@@ -108,6 +108,7 @@ public class SmugMugPhotosImporter
       jobStore.create(jobId, createCacheKey(), tempPhotosData);
     }
     tempPhotosData.addAlbumId(inputAlbum.getId(), response.getUri());
+    jobStore.update(jobId, createCacheKey(), tempPhotosData);
   }
 
   @VisibleForTesting

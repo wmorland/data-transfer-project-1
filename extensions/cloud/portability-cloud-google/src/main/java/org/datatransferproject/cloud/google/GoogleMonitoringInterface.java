@@ -14,8 +14,19 @@
  * limitations under the License.
  */
 
-dependencies {
-    // Logging
-    compile("org.slf4j:slf4j-api:${slf4jVersion}")
-    compile("org.slf4j:slf4j-log4j12:${slf4jVersion}")
+package org.datatransferproject.cloud.google;
+
+import org.datatransferproject.monitoring.MonitoringInterface;
+
+public class GoogleMonitoringInterface implements MonitoringInterface {
+
+  @Override
+  public void monitor(String metricName, long value) {
+
+  }
+
+  @Override
+  public void monitor(String metricName, String value) {
+
+  }
 }

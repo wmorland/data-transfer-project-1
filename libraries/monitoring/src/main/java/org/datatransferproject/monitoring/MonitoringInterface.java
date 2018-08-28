@@ -14,8 +14,16 @@
  * limitations under the License.
  */
 
-dependencies {
-    // Logging
-    compile("org.slf4j:slf4j-api:${slf4jVersion}")
-    compile("org.slf4j:slf4j-log4j12:${slf4jVersion}")
+package org.datatransferproject.monitoring;
+
+public interface MonitoringInterface {
+
+  default void monitor(String metricName, long value) {
+    throw new UnsupportedOperationException();
+  }
+
+  default void monitor(String metricName, String value) {
+    throw new UnsupportedOperationException();
+  }
+
 }

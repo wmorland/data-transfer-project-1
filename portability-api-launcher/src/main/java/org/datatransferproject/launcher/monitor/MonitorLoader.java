@@ -39,7 +39,7 @@ public class MonitorLoader {
             });
     return monitors.isEmpty()
         ? new ConsoleMonitor(DEBUG)
-        : new MultiplexMonitor((Monitor[]) monitors.toArray());
+        : new MultiplexMonitor(monitors.toArray(new Monitor[0]));
   }
 
   private MonitorLoader() {}
